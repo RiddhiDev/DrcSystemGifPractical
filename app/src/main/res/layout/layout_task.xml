@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="buttonData"
+            type="com.test.drcsystempracticaltest.data.model.TaskDataModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_holder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_bg"
+            android:backgroundTint="@color/light_pink"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tv_task_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{buttonData.taskDate}"
+                android:textColor="@color/black"
+                android:textSize="35sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="19" />
+
+
+            <TextView
+                android:id="@+id/tv_task_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@{buttonData.taskMonth}"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_task_date"
+                app:layout_constraintTop_toTopOf="@+id/tv_task_date"
+                tools:text="19" />
+
+
+            <TextView
+                android:id="@+id/tv_task_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@{buttonData.taskTime}"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_task_date"
+                app:layout_constraintStart_toEndOf="@+id/tv_task_date"
+                app:layout_constraintTop_toBottomOf="@+id/tv_task_month"
+                tools:text="19" />
+
+
+            <TextView
+                android:id="@+id/tv_task_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@{buttonData.taskName}"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_task_date"
+                tools:text="19" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_next"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/circle_task"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
