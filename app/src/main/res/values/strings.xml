@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DrcSystemPracticalTest</string>
+    <string name="add_your_task_to_mnage_your_daily_schedule">Add your task to manage \n your daily \n schedule</string>
+    <string name="long_press_to_edit_delete_task">Long press the task to \n edit or delete in one</string>
+    <string name="switch_toggle">Let us give you a notification of your task on time </string>
+
 </resources>
