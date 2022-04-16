@@ -5,6 +5,9 @@
 
     <data>
 
+        <variable
+            name="dataModel"
+            type="com.test.drcsystempracticaltest.data.model.IntroDataModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,7 +21,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="25dp"
-            android:src="@drawable/ic_plus"
+            android:src="@{dataModel.introImg}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -29,7 +32,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:layout_marginTop="20dp"
-            android:text="@string/add_your_task_to_mnage_your_daily_schedule"
+            android:text="@{dataModel.introDesc}"
+            android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_add_task" />
@@ -40,7 +44,7 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginBottom="20dp"
-            android:src="@drawable/ic_next"
+            android:src="@{dataModel.introNext}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
