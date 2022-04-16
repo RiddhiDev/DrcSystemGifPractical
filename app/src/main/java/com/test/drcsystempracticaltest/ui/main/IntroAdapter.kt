@@ -3,6 +3,7 @@ package com.test.drcsystempracticaltest.ui.main
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.test.drcsystempracticaltest.data.model.IntroDataModel
 import com.test.drcsystempracticaltest.databinding.LayoutIntroBinding
@@ -21,6 +22,18 @@ class IntroAdapter(
         override fun onBind() {
 
             binding.dataModel = introList.get(adapterPosition)
+            binding.btnAddTask.setImageDrawable(
+                ContextCompat.getDrawable(
+                    context,
+                    introList.get(adapterPosition).introImg
+                )
+            )
+            binding.ivNext.setImageDrawable(
+                ContextCompat.getDrawable(
+                    context,
+                    introList.get(adapterPosition).introNext
+                )
+            )
             binding.ivNext.setOnClickListener {
                 introAdapterCallback.onNextClick(adapterPosition)
             }
